@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13088503080600" configfile="/Lab10/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="pages/input" x="48" y="144" id="pf13088667136701" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13088667136702 pf13088668130684" path="/pages/input.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/result" x="252" y="207" id="pf13088667136703" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf13088667136702" path="/pages/result.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/error" x="254" y="60" id="pf13088668130685" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf13088668130684" path="/pages/error.jsp"/>
-  <links id="pf13088667136702" target="pf13088667136703" source="pf13088667136701" outcome="success"/>
-  <links id="pf13088668130684" target="pf13088668130685" source="pf13088667136701" outcome="failure"/>
-</pageflow:Pageflow>
+<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13088503080600" configfile="/Lab10/WebContent/WEB-INF/faces-config.xml"/>
