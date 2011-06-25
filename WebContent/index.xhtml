@@ -10,13 +10,27 @@
    </h:head>
    
  	<h:body>
-      	<h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/>
+      	<h1><h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/></h1>
+      	<br />
       	<h:form>
-         	<h:panelGrid columns="2">
-            	#{msgs.tempPrompt}
-            	<h:inputText value="#{temp.inputTemp}"/>
+      		<h:panelGrid columns="2">
+	         	<h:panelGrid columns="1">
+	            	#{msgs.tempPrompt}
+	            	<h:inputText value="#{temp.inputDist}"/>
+	            	<h:selectOneRadio value="#{temp.convType}">  
+	    				<f:selectItem itemValue="km" itemLabel="Kilometres" />  
+	    				<f:selectItem itemValue="mi" itemLabel="Miles" />  
+					</h:selectOneRadio>
+					<h:commandButton value="#{msgs.buttonPrompt}" 
+	         					actionListener="#{temp.handleMouseClick}"/>
+	      		</h:panelGrid>
+	      		<h:panelGrid columns="1">
+	      			<h:outputText value="#{msgs.convertedTempPrompt}" style="font-style: italic"/>
+	      			<h:outputText value="#{temp.finalDist}" />
+	      			<h:outputText value="#{temp.convResult}" />
+	      			<h:outputText value="#{temp.convMessage}" />
+	      		</h:panelGrid>
       		</h:panelGrid>
-         	<h:commandButton value="#{msgs.buttonPrompt}" action="viewTemp"/>
     	</h:form>
   	</h:body>
 </html>
