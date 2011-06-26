@@ -10,27 +10,49 @@
    </h:head>
    
  	<h:body>
-      	<h1><h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/></h1>
-      	<br />
-      	<h:form>
-      		<h:panelGrid columns="2">
-	         	<h:panelGrid columns="1">
-	            	#{msgs.tempPrompt}
-	            	<h:inputText value="#{temp.inputDist}"/>
-	            	<h:selectOneRadio value="#{temp.convType}">  
-	    				<f:selectItem itemValue="km" itemLabel="Kilometres" />  
-	    				<f:selectItem itemValue="mi" itemLabel="Miles" />  
-					</h:selectOneRadio>
-					<h:commandButton value="#{msgs.buttonPrompt}" 
-	         					actionListener="#{temp.handleMouseClick}"/>
-	      		</h:panelGrid>
-	      		<h:panelGrid columns="1">
-	      			<h:outputText value="#{msgs.convertedTempPrompt}" style="font-style: italic"/>
-	      			<h:outputText value="#{temp.finalDist}" />
-	      			<h:outputText value="#{temp.convResult}" />
-	      			<h:outputText value="#{temp.convMessage}" />
-	      		</h:panelGrid>
-      		</h:panelGrid>
-    	</h:form>
+ 	
+ 	<div id="wrapper">
+ 	
+		<div id="header">
+			<div id="header_image_container">
+				<img class="header_image" src="../resources/images/Open_Road.jpg" />
+			</div>
+			<div id="header_text_container">
+				<span class="header_text"><h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/></span>
+			</div>
+		</div>
+	
+ 		<div id="content">
+	      	<h:form>
+	      		<div id="left_float">
+	      			<h:panelGrid columns="1">
+		            	<h2>#{msgs.tempPrompt}</h2>
+		            	<h:inputText value="#{temp.inputDist}" />
+		            	<h:selectOneRadio value="#{temp.convType}">  
+		    				<f:selectItem itemValue="km" itemLabel="Kilometres" />  
+		    				<f:selectItem itemValue="mi" itemLabel="Miles" />  
+						</h:selectOneRadio>
+						<h:commandButton value="#{msgs.buttonPrompt}" 
+		         					actionListener="#{temp.handleMouseClick}"/>
+		      		</h:panelGrid>
+	      		</div>
+	      		<div id="right_float">
+	      			<h:panelGrid columns="1">
+	      				<h2>#{msgs.convertedTempPrompt}</h2>
+		      			<h:outputText value="#{temp.finalDist}" />
+		      			<h:outputText value="#{temp.convResult}" /><br />
+		      			<h:outputText value="#{temp.convMessage}" />
+		      		</h:panelGrid>
+	      		
+	      		</div>
+	    	</h:form>
+    	</div> <!-- content -->
+    	
+    	<div id="footer">
+    		<p>Copyright &copy;2011 Scott Robarts, COMP 3641</p>
+    	</div>
+    	
+    </div> <!-- wrapper -->
+  	
   	</h:body>
 </html>

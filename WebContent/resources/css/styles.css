@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+html, body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	background-color:#eee;
+	font-size:12px;
+	margin: 0;
+    padding: 0;
+}
+
+p, h1, form, button{border:0; margin:0; padding:0;}
+
+/* ----------- Wrapper -----------*/
+#wrapper {
+	width:750px;
+	margin:0 auto;
+	width:900px;
+	text-align:left;
+	background-color:#fff;
+	text-align:left;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+
+/* ----------- Header ------------ */
+#header {
+	background-color: #FFFFFF;
+    height: 290px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#header_image_container {
+	float:left;
+	width:650px;
+}
+	
+#header_text_container {
+	float:right;
+	width:250px;
+	text-align:left;
+}
+
+hr {
+	width:50%;
+	color:#b7ddf2;
+}
+
+h1 {
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:8px;
+}
+
+img.header_image {
+	padding-left:0px;
+}
+
+.header_text {
+	font-size:40px;
+	font-weight:bold;
+	color:#bbb;
+}
+
+/* ---------- Content ------------ */
+
+#content {
+	float:left;
+	width:90%;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+#content h1 {
+	font-size:28px;
+	color:#555;
+}
+
+#content p {
+	font-size:14px;
+	color:#333;
+}
+
+#content ul {
+	list-style-type:none;
+}
+
+#content ul li {
+	font-size:16px;
+	color:#333;
+	padding:4px;
+}
+
+#centered_div {
+	position:relative;
+	text-align:center;
+}
+
+#left_float {
+	float:left;
+	width:40%;
+	height:150px;
+	margin-left:40px;
+	border:1px solid #ccc;
+}
+
+#right_float {
+	float:right;
+	width:40%;
+	height:150px;
+	border:1px solid #ccc;
+}
+
+/* -------- Footer --------------- */
+
+.clearing {clear:both;height:1px;overflow:hidden;}
+
+#footer {	
+	clear:both;
+	background-color: #777777;
+    border-top: 10px solid #FFF;
+    color: #EFEFEF;
+    height: 45px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#footer_links {
+	padding-bottom:8px;
+}
+
+#footer_links a {
+	color:#eee;
+	font-size:1.4em;
+}
+
+#footer_links a:hover {
+	color:navy;
+}
+
+#spacer {
+	height:10px;
+	width:100%;
+}
