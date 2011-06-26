@@ -7,11 +7,24 @@ import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 
 public class NumberValidator implements Validator {
-   public void validate(FacesContext context, UIComponent component, Object value) {
-      if (!(value instanceof Double)) {
-    	 FacesMessage message = com.lab10.util.Messages.getMessage("com.lab10.messages", "badDouble", null);
-         message.setSeverity(FacesMessage.SEVERITY_ERROR);
-         throw new ValidatorException(message);
-      }
+	
+   public void validate(FacesContext context, UIComponent component, Object value)
+	   throws ValidatorException {
+		   String inputNumber;
+		   inputNumber = value.toString();
+		   if (!doubleCheck(inputNumber)) {
+			   FacesMessage message = com.lab10.util.Messages.getMessage("com.lab10.messages", "badDouble", null);
+			   message.setSeverity(FacesMessage.SEVERITY_ERROR);
+			   throw new ValidatorException(message);
+		   }
+	   }
+   
+   private static boolean doubleCheck(String inputNumber) {
+	   try {
+		   Double.parseDouble(inputNumber);
+		   return true;
+	   } catch (Exception nfe) {
+		   return false; 
+	   }  
    }
 }
