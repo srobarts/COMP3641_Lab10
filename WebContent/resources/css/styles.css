@@ -10,6 +10,17 @@ html, body{
 
 p, h1, form, button{border:0; margin:0; padding:0;}
 
+.errors {
+   font-style: italic;
+   color: red;
+}
+
+#error_container {
+	position:relative;
+	width:800px;
+	text-align:center;
+}
+
 /* ----------- Wrapper -----------*/
 #wrapper {
 	width:750px;
