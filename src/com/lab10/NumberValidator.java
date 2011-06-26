@@ -10,8 +10,7 @@ public class NumberValidator implements Validator {
 	
    public void validate(FacesContext context, UIComponent component, Object value)
 	   throws ValidatorException {
-		   String inputNumber;
-		   inputNumber = value.toString();
+		   String inputNumber = value.toString();
 		   if (!doubleCheck(inputNumber)) {
 			   FacesMessage message = com.lab10.util.Messages.getMessage("com.lab10.messages", "badDouble", null);
 			   message.setSeverity(FacesMessage.SEVERITY_ERROR);
@@ -21,9 +20,10 @@ public class NumberValidator implements Validator {
    
    private static boolean doubleCheck(String inputNumber) {
 	   try {
-		   Double.parseDouble(inputNumber);
+		   @SuppressWarnings("unused")
+		   double dbl = Double.parseDouble(inputNumber);
 		   return true;
-	   } catch (Exception nfe) {
+	   } catch (NumberFormatException nfe) {
 		   return false; 
 	   }  
    }

@@ -15,7 +15,7 @@
  	
 		<div id="header">
 			<div id="header_image_container">
-				<img class="header_image" src="../resources/images/Open_Road.jpg" />
+				<h:graphicImage alt="The image could not be found."   value="/resources/images/Open_Road.jpg" />
 			</div>
 			<div id="header_text_container">
 				<span class="header_text"><h:outputText value="#{msgs.indexPageTitle}" styleClass="emphasis"/></span>
@@ -31,10 +31,10 @@
 	      		<div id="left_float">
 	      			<h:panelGrid columns="1">
 		            	<h2>#{msgs.tempPrompt}</h2>
-		            	<h:inputText id="inputDist" value="#{dist.inputDist}">
-		            		<f:validator validatorId="com.lab10.NumberValidator"/>
+		            	<h:inputText id="inputDist" value="#{dist.inputDist}" required="true">
+		            		<f:validator validatorId="NumberValidator"/>
 		            	</h:inputText>
-		            	<h:selectOneRadio value="#{dist.convType}">  
+		            	<h:selectOneRadio value="#{dist.convType}" checked="km">  
 		    				<f:selectItem itemValue="km" itemLabel="Kilometres" />  
 		    				<f:selectItem itemValue="mi" itemLabel="Miles" />  
 						</h:selectOneRadio>

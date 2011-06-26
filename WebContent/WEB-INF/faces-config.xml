@@ -6,12 +6,6 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
     version="2.0">
 
-	<managed-bean>
-	  <managed-bean-name>conversionBean</managed-bean-name>
-	  <managed-bean-class>com.lab10.ConversionBean</managed-bean-class>
-	  <managed-bean-scope>request</managed-bean-scope>
-	</managed-bean>
-
 	<application>
       <resource-bundle>
          <base-name>com.lab10.messages</base-name>
@@ -20,7 +14,7 @@
    </application>
    
    <validator> 
-      <validator-id>com.lab10.NumberValidator</validator-id>
+      <validator-id>NumberValidator</validator-id>
       <validator-class>com.lab10.NumberValidator</validator-class> 
    </validator>
 
